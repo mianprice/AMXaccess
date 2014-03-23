@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<head>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<link href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css' rel='stylesheet' type='text/css'>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.js"></script>
+ <link rel="stylesheet" type="text/css" href="mockup.css" />
+
+ <script>
+ $(function() {
+$( "#selectable" ).selectable();
+});
+ </script>
+ 
+ <script>
+
+$( "input[type=submit], a, button" )
+.button()
+.click(function( event ) {
+event.preventDefault();
+});
+
+</script>
+
+ <script>
+$(function() {
+$( "#slider-vertical" ).slider({
+orientation: "horizontal",
+range: "min",
+min: 0,
+max: 100,
+value: 60,
+slide: function( event, ui ) {
+$( "#amount" ).val( ui.value );
+}
+});
+$( "#amount" ).val( $( "#slider-vertical" ).slider( "value" ) );
+});
+</script>
+
+
+</head>
+
+
+<body>
+<div id="header">
+<p style="font-size:3.5em;">Welcome Guest!</p>
+</div>
+
+<div id="load_preset">
+
+	<ol id="selectable">
+	<p style="font-size:3em; text-decoration:underline; color:orange;">Load Preset</p>
+<li class="ui-widget-content">Video Mode</li>
+<li class="ui-widget-content">Teaching on Board</li>
+<li class="ui-widget-content">Teaching from Slides</li>
+
+</ol>
+</div>
+<br>
+<button class="button">Set Preset</button>
+<br>
+<br>
+<div id="current_buttons">
+<button class="button">Projector</button>
+<button class="button">Projector Screen</button>
+<button class="button">Front Lights</button>
+<button class="button">Overhead Lights</button>
+<button class="button">Wall Lights</button>
+<button class="button">Speakers</button>
+
+
+</div>
+
+<p>
+<label for="amount">Volume:</label>
+<input type="text" id="amount" style="border:0; color:#f6931f; font-weight:bold;">
+</p>
+<div id="slider-vertical" style="height:200px;"></div>
+
+
+
+</body>
