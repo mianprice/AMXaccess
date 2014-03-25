@@ -9,9 +9,7 @@ $(document).ready(function(){
 		   success: function (msg) {
 			   alert("Return from Server: " + msg);
 			   
-			   if (msg == "OK"){
-					window.location.href = "/mockup.html";
-			   }
+			   window.location.href = "/mockup.html";
 		   }
 		});
 		

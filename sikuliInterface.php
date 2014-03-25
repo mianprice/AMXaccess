@@ -1,8 +1,7 @@
 <?php 
-	//$command = 'pythonTest.py';
-	//$arg = "test";
+	$cmd = "C:\SikuliX\runIDE.cmd -r \sikuli\start.sikuli -c";
 	
-	$temp = exec("pythonTest.py 5");
+	$temp = shell_exec($cmd);
 	echo $temp;
 
 ?>
