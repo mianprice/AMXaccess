@@ -8,7 +8,7 @@ class LoginTest extends PHPUnit_Framework_TestCase{
 	*/
 	public function testLogin($login, $password){
 		
-		$actual = Login.login($login, $password);
+		$actual = login($login, $password);
 		$expected = true;
 		$this->assertEquals($actual, $expected);
 	}
