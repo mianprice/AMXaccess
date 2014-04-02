@@ -10,22 +10,22 @@ class ButtonPressTest extends PHPUnit_Framework_TestCase
   */
   public function testButtonPathExistence($button, $room, $correctPath)
   {
-		$buttonPath = ButtonPress.retrievePathFromDatabase($button,$room);
+		$buttonPath = retrievePathFromDatabase($button,$room);
 		$this->assertEquals($buttonPath, $correctPath);
   }
   /*
   @dataProvider nonExistentButtonProvider
   */
   public function testButtonFailureException($button,$room){
-		$buttonPath = ButtonPress.retrievePathFromDatabase($button,$room);
+		$buttonPath = retrievePathFromDatabase($button,$room);
 		$this->assertEquals($buttonPath, null);
   }
   
   public function provider(){
 		return array(
-			array('projector','SN011', 'C:\wamp\www\AMX\@N011\projector'),
-			array('dimLights','SN011','C:\wamp\www\AMX\@N011\dimLights'),
-			array('screenDown','SN011','C:\wamp\www\AMX\@N011\screenDown'));
+			array('projector','SN011', 'C:\wamp\www\AMX\SN011\projector'),
+			array('dimLights','SN011','C:\wamp\www\AMX\SN011\dimLights'),
+			array('screenDown','SN011','C:\wamp\www\AMX\SN011\screenDown'));
   }
   
   public function nonExistentButtonProvider(){
