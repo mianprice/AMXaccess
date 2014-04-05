@@ -1,0 +1,40 @@
+div{
+display:inline-block;
+max-width:75%;
+text-align:center;
+
+}
+.rightSide{
+float:right;
+}
+.leftSide{
+float:left;
+}
+#standardPresets{
+background-color:orange;
+text-align:center;
+
+}
+
+#addOnPresets{
+background-color:red;
+
+}
+#sideBar{
+background-color:blue;
+padding:1.5em;
+
+}
+#sideBar button{
+display:block;
+
+border: .2em solid #888888;
+
+}
+button{
+border: .2em solid #888888;
+margin: 1.5em;
+width:6em;
+height:5em;
+display:inline-block;
+}
