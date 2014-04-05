@@ -1,0 +1,117 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+
+body{
+	background-color:#00803C;
+}
+
+#projectorMain{
+	margin-left:auto;
+	margin-right:auto;
+	width:500px;
+	
+}
+
+#projectorContainer{
+	position:absolute;
+	margin-left:auto;
+	margin-right:auto;
+	background-color:#FF6600;
+	border:1px solid black;
+	width:400px;
+	height:265px;
+}
+
+#powerOff{
+	position:absolute;
+	background-color:white;
+	height:50px;
+	width:185px;
+	top:25px;
+	left:10px;
+	text-align:center;
+}
+
+#powerOn{
+	position:absolute;
+	background-color:white;
+	height:50px;
+	width:185px;
+	top:25px;
+	left:205px;
+	text-align:center;
+}
+
+#imageBlank{
+	position:absolute;
+	background-color:white;
+	height:50px;
+	width:380px;
+	top:85px;
+	left:10px;
+	text-align:center;
+}
+
+#imageBlank{
+	position:absolute;
+	background-color:white;
+	height:50px;
+	width:380px;
+	top:85px;
+	left:10px;
+	text-align:center;
+}
+
+#PC1VGA1400x1050{
+	position:absolute;
+	background-color:white;
+	height:50px;
+	width:120px;
+	top:145px;
+	left:10px;
+	text-align:center;
+}
+
+#docCam{
+	position:absolute;
+	background-color:white;
+	height:50px;
+	width:120px;
+	top:145px;
+	left:140px;
+	text-align:center;
+}
+
+#laptopVGA1400x1050{
+	position:absolute;
+	background-color:white;
+	height:50px;
+	width:120px;
+	top:145px;
+	left:270px;
+	text-align:center;
+}
+
+#video{
+	position:absolute;
+	background-color:white;
+	height:50px;
+	width:185px;
+	top:205px;
+	left:10px;
+	text-align:center;
+}
+
+#laptopDVI{
+	position:absolute;
+	background-color:white;
+	height:50px;
+	width:185px;
+	top:205px;
+	left:205px;
+	text-align:center;
+}
+
+
