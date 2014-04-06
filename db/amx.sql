@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 06, 2014 at 04:37 PM
+-- Generation Time: Apr 06, 2014 at 05:22 PM
 -- Server version: 5.6.12-log
 -- PHP Version: 5.4.12
 
@@ -155,7 +155,8 @@ CREATE TABLE IF NOT EXISTS `amxusers` (
   `title` varchar(150) NOT NULL,
   `sign_up_stamp` int(11) NOT NULL,
   `last_sign_in_stamp` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  FULLTEXT KEY `title` (`title`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -185,6 +186,7 @@ INSERT INTO `amxuser_permission_matches` (`id`, `user_id`, `permission_id`) VALU
 --
 
 CREATE TABLE IF NOT EXISTS `presets` (
+  `primary_id` int(11) NOT NULL AUTO_INCREMENT,
   `id` int(11) NOT NULL,
   `audio` tinyint(1) NOT NULL,
   `lights` tinyint(1) NOT NULL,
@@ -215,8 +217,10 @@ CREATE TABLE IF NOT EXISTS `presets` (
   `stop` tinyint(1) NOT NULL,
   `down` tinyint(1) NOT NULL,
   `systemReset` tinyint(1) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `primary_id` (`primary_id`),
+  KEY `primary_id_2` (`primary_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 --
 -- Constraints for dumped tables
