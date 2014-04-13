@@ -1,7 +1,7 @@
 <?php 
-	$cmd = "C:\SikuliX\runIDE.cmd -r \sikuli\start.sikuli -c";
+	//$cmd = "C:\SikuliX\runIDE.cmd -r \sikuli\start.sikuli -c";
 	
-	$temp = shell_exec($cmd);
-	echo $temp;
+	$data = file_get_contents("php://input");
+	echo $data;
 
 ?>
