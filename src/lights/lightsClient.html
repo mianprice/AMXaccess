@@ -2,14 +2,20 @@
 <html>
 <head>
 	<title>base lights page</title>
+	<script src="../jquery-1.11.0.min"></script>
+	<script src="../jquery.mobile-1.4.2/jquery.mobile-1.4.2.min"></script>
+	<!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />-->
 	<link rel="stylesheet" type="text/css" href="lights.css" />
-	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 
 <body>
-
-		
+	<div data-role="page">
+		<div data-role="header">
+			<h1>Light Page</h1>
+		</div>
+		<div role="main" class="ui-content">
 		<div class="rightSide">
 			<div id="standardPresets" >
 				<h2>Standard Presets</h2>
@@ -32,9 +38,11 @@
 				<button type="button" id="allOff">All Off</button>
 			</div>
 		</div>
-		
-		
-	
+		</div>
+		<div data-role="footer">
+			
+		</div>
+	</div>
 	</body>
 
 
