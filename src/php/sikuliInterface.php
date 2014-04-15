@@ -1,5 +1,6 @@
 <?php 
-	//$cmd = "C:\SikuliX\runIDE.cmd -r \sikuli\start.sikuli -c";
+	
+	$cmd = "C:/SikuliX/sikuli-ide.exe -r ../../sikuli/start.sikuli/start.py -c";
 	
 	$data = file_get_contents("php://input");
 	echo $data;

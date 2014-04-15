@@ -31,7 +31,7 @@ var state = {
 }
 
 $(document).ready(function(){
-	alert("document ready");
+	
 	
 	$(".button").click(function(){
 		var attributeName = $(this).attr('id') + ".jpg";
@@ -42,16 +42,21 @@ $(document).ready(function(){
 		if($(this).attr('id') == "proj"){
 			alert("loading projector");
 			$("#contentContainer").load("projector/projector.html");
+			$("#containerStyle").attr("href","projector/projector.css");
 		}
 
-		jQuery.ajax({
+		var jqxhr = $.ajax({
 		   type: "POST",
-		   url: "/sikuliInterface.php",
+		   url: "php/sikuliInterface.php",
 		   data: state,
 		   success: function (msg) {
 			   alert("Return from Server: " + msg);
 			   
 		   }
+		}).done(function(){
+			alert("success");
+		}).fail(function(){
+			alert("fail");
 		});
 		
 	});
@@ -72,7 +77,7 @@ $(document).ready(function(){
 		
 		jQuery.ajax({
 		   type: "POST",
-		   url: "/sikuliInterface.php",
+		   url: "php/sikuliInterface.php",
 		   data: state,
 		   success: function (msg) {
 			   alert("Return from Server: " + msg);
