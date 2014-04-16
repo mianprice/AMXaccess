@@ -7,14 +7,17 @@ def enterLoginInfo():
     click(Pattern("1395157465014.png").targetOffset(3,3))    
 def startNewIEWindow():
     App.open("c:\Program Files\Internet Explorer\iexplore.exe")
-    wait("1395157058486.png",10)
-    sleep(0.4)
-    if exists("1395157140088.png") is not None:
-        type ("152.2.129.201")
-    else:
-        click(Pattern("1395156745984.png").targetOffset(79,7))
-        type("152.2.129.201")
+    sleep(5)
+    type('d', KeyModifier.ALT)
+    type(Key.BACKSPACE)
+    type("152.2.129.201")
     type(Key.ENTER)
+   # if exists("1395157140088.png") is not None:
+     #   type ("152.2.129.201")
+  #  else:
+    #    click(Pattern("1395156745984.png").targetOffset(79,7))
+     #   type("152.2.129.201")
+   # type(Key.ENTER)
  
 def demo():
     startNewIEWindow()

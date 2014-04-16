@@ -33,6 +33,7 @@ var state = {
 $(document).ready(function(){
 	
 	
+
 	$(".button").click(function(){
 		var attributeName = $(this).attr('id') + ".jpg";
 		state[attributeName] = !state[attributeName];
